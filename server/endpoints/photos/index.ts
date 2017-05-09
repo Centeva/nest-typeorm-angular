@@ -1,0 +1,1 @@
+export {PhotosModule} from './photos.module';
