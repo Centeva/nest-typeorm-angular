@@ -1,0 +1,54 @@
+[
+  {
+    "name": "default",
+    "driver": {
+      "type": "mssql",
+      "host": "localhost",
+      "port": 1433,
+      "username": "typeorm",
+      "password": "",
+      "database": "typeorm"
+    },
+    "autoSchemaSync": true,
+    "entities": [
+      "../shared/models/*.ts"
+    ],
+    "subscribers": [
+      "subscriber/*.ts,"
+    ],
+    "migrations": [
+      "migrations/*.ts"
+    ],
+    "cli": {
+      "entitiesDir": "models",
+      "migrationsDir": "migrations",
+      "subscribersDir": "subscriber"
+    }
+  },
+    {
+    "name": "postgres",
+    "driver": {
+      "type": "postgres",
+      "host": "localhost",
+      "port": 5432,
+      "username": "typeorm",
+      "password": "",
+      "database": "typeorm"
+    },
+    "autoSchemaSync": true,
+    "entities": [
+      "../shared/models/*.ts"
+    ],
+    "subscribers": [
+      "subscriber/*.ts,"
+    ],
+    "migrations": [
+      "migrations/*.ts"
+    ],
+    "cli": {
+      "entitiesDir": "models",
+      "migrationsDir": "migrations",
+      "subscribersDir": "subscriber"
+    }
+  }
+]
