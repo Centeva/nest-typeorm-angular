@@ -1,6 +1,6 @@
 import { Component, HttpException } from 'nest.js';
 import { getEntityManager, Repository } from 'typeorm';
-import { Photo } from '../../models/Photo';
+import { Photo } from '../../../shared/models';
 
 @Component()
 export class PhotosService {

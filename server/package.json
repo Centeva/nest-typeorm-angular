@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.17.1",
-    "mssql": "^4.0.4",
+    "mssql": "3.3.0",
     "nest.js": "^1.0.1",
     "pg": "^6.1.5",
     "reflect-metadata": "^0.1.10",
