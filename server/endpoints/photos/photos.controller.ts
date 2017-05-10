@@ -7,7 +7,7 @@ export class PhotosController {
 
     @Get('/all')
     async getAllPhotos(@Response() res) {
-        let photos = await this.photoService.getAllPhotos();
-        res.status(HttpStatus.OK).json(photos);
+        // let photos = await this.photoService.getAllPhotos();
+        res.status(HttpStatus.OK).json(null);
     }
 }
