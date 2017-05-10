@@ -6,11 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "migrate": "npm run compile && typeorm migrations:run",
-    "clean": "rm -rf build",
-    "compile": "tsc",
-    "build": "npm run clean && npm run compile",
-    "watch-server": "nodemon --ignore build -e ts"
+    "migrate": "npm run build && typeorm migrations:run",
+    "clean": "rimraf build",
+    "build": "npm run clean && tsc",
+    "watch-server": "nodemon --ignore build -e ts",
+    "dropdb": "npm run build && typeorm schema:drop",
+    "syncdb": "npm run build && typeorm schema:sync",
+    "newmigrate": "typeorm migrations:create -n "
   },
   "author": "anhany",
   "license": "MIT",
@@ -27,6 +29,7 @@
     "@types/express": "^4.0.35",
     "@types/node": "~7.0.16",
     "ts-node": "~3.0.3",
-    "nodemon": "1.11.0"
+    "nodemon": "1.11.0",
+    "rimraf":"2.6.1"
   }
 }

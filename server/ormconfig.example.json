@@ -11,18 +11,14 @@
     },
     "autoSchemaSync": true,
     "entities": [
-      "../shared/models/*.ts"
-    ],
-    "subscribers": [
-      "subscriber/*.ts,"
+      "build/models/*.js"
     ],
     "migrations": [
-      "migrations/*.ts"
+      "build/migrations/*.js"
     ],
     "cli": {
       "entitiesDir": "models",
-      "migrationsDir": "migrations",
-      "subscribersDir": "subscriber"
+      "migrationsDir": "migrations"
     }
   },
     {

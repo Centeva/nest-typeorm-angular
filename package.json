@@ -7,8 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "anhany",
-  "license": "MIT",
-  "dependencies": {
-    "typeorm": "0.0.11"
-  }
+  "license": "MIT"
 }
