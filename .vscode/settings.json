@@ -1,0 +1,24 @@
+{
+    "files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.DS_Store": true,
+		"**/*.js": {
+			"when": "$(basename).ts"
+		},
+		"**/*.css": {
+			"when": "$(basename).less"
+		},
+		"**/*.js.map": true,
+		"app/**/*.js": true,
+		"app/**/*.css": true,
+		"tscommand*.txt": true,
+		"*.csproj.user": true,
+		".tscache/": true,
+		"assets/": true,
+		"app.js": true,
+		"polyfills.js": true,
+		"vendor.js": true,
+		"index.html": true
+	}
+}

@@ -3,10 +3,13 @@ import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import { NestFactory } from 'nest.js';
 import { ApplicationModule } from './app.module';
+import { createConnection, ConnectionOptions } from 'typeorm';
+
+let connectionObject: ConnectionOptions = require('./ormconfig.json')[0];
+connectionObject = { ...connectionObject, entities: ['models/*.ts'] }; 
 
 // database connection
-import {createConnection} from 'typeorm';
-createConnection().then(async connection => {
+createConnection(connectionObject).then(async connection => {
     const instance = express();
     instance.use(bodyParser.json());
 
