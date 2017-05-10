@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToMany } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, JoinTable, ManyToMany } from "typeorm";
 import { Person } from "./Person";
 
 @Entity()
@@ -15,6 +15,7 @@ export class Contract {
     @Column()
     dateCreated: Date;
 
-    @ManyToMany(type => Person)
+    @ManyToMany(type => Person, person => person.contracts)
+    @JoinTable()
     people: Person[] = [];
 }
