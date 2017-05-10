@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "migrate": "tsc && typeorm migrations:run"
+    "migrate": "npm run compile && typeorm migrations:run",
+    "clean": "rm -rf build",
+    "compile": "tsc",
+    "build": "npm run clean && npm run compile",
+    "watch-server": "nodemon --ignore build -e ts"
   },
   "author": "anhany",
   "license": "MIT",
@@ -22,6 +26,7 @@
   "devDependencies": {
     "@types/express": "^4.0.35",
     "@types/node": "~7.0.16",
-    "ts-node": "~3.0.3"
+    "ts-node": "~3.0.3",
+    "nodemon": "1.11.0"
   }
 }

@@ -5,10 +5,9 @@ import { PhotosService } from './photos.service';
 export class PhotosController {
     constructor(private photoService: PhotosService) {}
 
-    @Get()
+    @Get('/all')
     async getAllPhotos(@Response() res) {
         let photos = await this.photoService.getAllPhotos();
-        console.log("controller", photos);
         res.status(HttpStatus.OK).json(photos);
     }
 }
