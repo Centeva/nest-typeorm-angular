@@ -13,7 +13,6 @@ export class Person {
     lastName: string;
 
     @ManyToMany(type => Contract, contract => contract.people)
-    @JoinTable()
     contracts: Contract[] = [];
 
 }
